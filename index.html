@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet"> 
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    
+    <div id="result-field">
+        <div id="input"></div>
+        <div id="result"></div>
+    </div>
+
+    <table class="buttons">
+        <tr>
+            <td class="action" onclick="clearAll()">AC</td>
+            <td class="action" onclick="clearLast()">C</td>
+            <td onclick="percent()">%</td>
+            <td class="operator" onclick="appendOperation(' / ')">÷</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(7)">7</td>
+            <td onclick="appendOperation(8)">8</td>
+            <td onclick="appendOperation(9)">9</td>
+            <td class="operator" onclick="appendOperation(' * ')">×</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(4)">4</td>
+            <td onclick="appendOperation(5)">5</td>
+            <td onclick="appendOperation(6)">6</td>
+            <td class="operator" onclick="appendOperation(' - ')">-</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(1)">1</td>
+            <td onclick="appendOperation(2)">2</td>
+            <td onclick="appendOperation(3)">3</td>
+            <td class="operator" onclick="appendOperation(' + ')">+</td>
+        </tr>
+        <tr>
+            <td id="blank"></td>
+            <td onclick="appendOperation(0)">0</td>
+            <td onclick="appendOperation('.')">,</td>
+            <td id="equal" onclick="calculateResult()">=</td>
+        </tr>
+    </table>
+
+</body>
+</html>
